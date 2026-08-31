@@ -1,15 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import Techologies from './Techologies';
-import Headers from './Header';
-import Footer from './Footer';
 
 function App() {
   return (
     <div className="App">
-      <Headers />
-      <Techologies />
-      <Footer />
+      <header>
+        <img src='https://img.magnific.com/free-vector/bird-colorful-gradient-design-vector_343694-2506.jpg' alt='logo' />
+      </header>
+      <nav>
+        <div>
+          Profile
+        </div>
+        <div>
+          Messages
+        </div>
+        <div>
+          Main content
+        </div>
+      </nav>
     </div>
   );
 }
