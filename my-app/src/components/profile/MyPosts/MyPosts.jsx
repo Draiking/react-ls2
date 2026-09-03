@@ -9,8 +9,8 @@ const MyPosts = () => {
       <button>add post</button>
     </div>
     <div className={stylles.posts}>
-      <Post message='hi, how are you'/>
-      <Post message='it/s my first post'/>
+      <Post message='hi, how are you' likecount='15'/>
+      <Post message='it/s my first post' likecount='20'/>
     </div>
   </div>
 }
