@@ -4,19 +4,19 @@ import stylles from './Navbar.module.css';
 const NavBar = () => {
   return <nav className={stylles.nav}>
     <div className={stylles.item}>
-      <a>Profile</a>
+      <a href='/profile'>Profile</a>
     </div>
     <div className={`${stylles.item} ${stylles.active}`}>
-      <a>Messages</a>
+      <a href='/messages'>Messages</a>
     </div>
     <div className={stylles.item}>
-      <a>News</a>
+      <a href='/news'>News</a>
     </div>
     <div className={stylles.item}>
-      <a>Music</a>
+      <a href='/music'>Music</a>
     </div>
     <div className={stylles.item}>
-      <a>Settings</a>
+      <a href='/setting'>Settings</a>
     </div>
   </nav>
 }
