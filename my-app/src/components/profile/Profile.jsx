@@ -1,4 +1,4 @@
-import MyPosts from './MyPosts/Post/Post';
+import MyPosts from './MyPosts/MyPosts';
 import stylles from './Profile.module.css';
 
 const Profile = () => {
