@@ -1,22 +1,23 @@
+import { NavLink } from 'react-router-dom';
 import stylles from './Navbar.module.css';
 
 
 const NavBar = () => {
   return <nav className={stylles.nav}>
     <div className={stylles.item}>
-      <a href='/profile'>Profile</a>
+      <NavLink to='/profile'>Profile</NavLink>
     </div>
     <div className={`${stylles.item} ${stylles.active}`}>
-      <a href='/messages'>Messages</a>
+      <NavLink to='/messages'>Messages</NavLink>
     </div>
     <div className={stylles.item}>
-      <a href='/news'>News</a>
+      <NavLink to='/news'>News</NavLink>
     </div>
     <div className={stylles.item}>
-      <a href='/music'>Music</a>
+      <NavLink to='/music'>Music</NavLink>
     </div>
     <div className={stylles.item}>
-      <a href='/setting'>Settings</a>
+      <NavLink to='/settings'>Settings</NavLink>
     </div>
   </nav>
 }
