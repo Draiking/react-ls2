@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import stylles from './Dialogs.module.css';
 
 const Dialogs = (props) => {
@@ -5,19 +6,19 @@ const Dialogs = (props) => {
         <div className={stylles.dialogs}>
             <div className={stylles.dialogsItems}>
                 <div className={stylles.dialog + ' ' + stylles.active}>
-                    Dimych
+                 <NavLink to='/messages/1'>Dimych</NavLink>   
                 </div>
                 <div className={stylles.dialog}>
-                    Sveta
+                   <NavLink to='/messages/2'>Sveta</NavLink>   
                 </div>
                 <div className={stylles.dialog}>
-                    Andrey
+                  <NavLink to='/messages/3'>Andrey</NavLink>    
                 </div>
                 <div className={stylles.dialog}>
-                    Sasha
+                  <NavLink to='/messages/4'>Sasha</NavLink>    
                 </div>
                 <div className={stylles.dialog}>
-                    Viktor
+                  <NavLink to='/messages/5'>Viktor</NavLink>    
                 </div>
             </div>
             <div className={stylles.messages}>
