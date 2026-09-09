@@ -1,30 +1,37 @@
 import { NavLink } from 'react-router-dom';
 import stylles from './Dialogs.module.css';
 
+function DialogItem(props) {
+    let path = '/messages/' + props.id
+
+    return (
+        <div className={stylles.dialog + ' ' + stylles.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    )
+}
+
+function Message(props) {
+    
+    return(
+        <div className={stylles.message}>{props.message}</div>
+    )
+}
+
 const Dialogs = (props) => {
     return (
         <div className={stylles.dialogs}>
             <div className={stylles.dialogsItems}>
-                <div className={stylles.dialog + ' ' + stylles.active}>
-                 <NavLink to='/messages/1'>Dimych</NavLink>   
-                </div>
-                <div className={stylles.dialog}>
-                   <NavLink to='/messages/2'>Sveta</NavLink>   
-                </div>
-                <div className={stylles.dialog}>
-                  <NavLink to='/messages/3'>Andrey</NavLink>    
-                </div>
-                <div className={stylles.dialog}>
-                  <NavLink to='/messages/4'>Sasha</NavLink>    
-                </div>
-                <div className={stylles.dialog}>
-                  <NavLink to='/messages/5'>Viktor</NavLink>    
-                </div>
+                <DialogItem name='Dimych' id='1' />
+                <DialogItem name='Sveta' id='2' />
+                <DialogItem name='Andrey' id='3' />
+                <DialogItem name='Sasha' id='4' />
+                <DialogItem name='Viktor' id='5' />
             </div>
             <div className={stylles.messages}>
-                <div className={stylles.message}>hi</div>
-                <div className={stylles.message}>how are you</div>
-                <div className={stylles.message}>word</div>
+                <Message message='hi'/>
+                <Message message='how are you'/>
+                <Message message='word'/>
             </div>
         </div>
 
