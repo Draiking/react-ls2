@@ -8,6 +8,9 @@ const MyPosts = () => {
         { id: 2, message: 'it/s my first post', likecount: 20 },
     ]
 
+    let postsElements = postsData
+    .map(p => <Post message={p.message} likecount={p.likecount} />)
+
 
   return <div className={stylles.postBlock}>
     <h3>My posts</h3>
@@ -20,8 +23,7 @@ const MyPosts = () => {
       </div>
     </div>
     <div className={stylles.posts}>
-      <Post message={postsData[0].message} likecount={postsData[0].likecount} />
-      <Post message={postsData[1].message} likecount={postsData[1].likecount} />
+      {postsElements}
     </div>
   </div>
 }

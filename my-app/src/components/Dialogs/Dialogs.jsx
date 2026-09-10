@@ -5,8 +5,9 @@ function DialogItem(props) {
     let path = '/messages/' + props.id
 
     return (
-        <div className={stylles.dialog + ' ' + stylles.active}>
-            <NavLink to={path}>{props.name}</NavLink>
+        <div className={stylles.dialog}>
+            <NavLink className={({ isActive }) => isActive ? stylles.active : ''
+            } to={path}>{props.name}</NavLink>
         </div>
     )
 }
@@ -28,6 +29,9 @@ const Dialogs = (props) => {
         { id: 5, name: 'Viktor' },
     ]
 
+    let dialogsElements = dialogsData
+        .map(d => <DialogItem name={d.name} id={d.id} />)
+
     let messagesData = [
         { id: 1, message: 'hi' },
         { id: 2, message: 'how are you' },
@@ -36,21 +40,17 @@ const Dialogs = (props) => {
         { id: 5, message: 'Yo' },
     ]
 
+    let messagesElements = messagesData
+        .map(m => <Message message={m.message} />)
+
 
     return (
         <div className={stylles.dialogs}>
             <div className={stylles.dialogsItems}>
-                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
-                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
-                <DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />
-                <DialogItem name={dialogsData[3].name} id={dialogsData[3].id} />
-                <DialogItem name={dialogsData[4].name} id={dialogsData[4].id} />
-
+                {dialogsElements}
             </div>
             <div className={stylles.messages}>
-                <Message message={messagesData[0].message} />
-                <Message message={messagesData[1].message} />
-                <Message message={messagesData[2].message} />
+                {messagesElements}
             </div>
         </div>
 
