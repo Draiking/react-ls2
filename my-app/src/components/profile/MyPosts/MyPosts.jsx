@@ -1,13 +1,11 @@
-import { postsData } from '../../..';
+import { postsData } from '../../../Data';
 import stylles from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = () => {
 
-
   let postsElements = postsData
-    .map(p => <Post message={p.message} likecount={p.likecount} />)
-
+    .map(p => <Post key={p.id} message={p.message} likecount={p.likecount} />)
 
   return <div className={stylles.postBlock}>
     <h3>My posts</h3>
