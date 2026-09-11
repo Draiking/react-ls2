@@ -1,18 +1,9 @@
-import { NavLink } from 'react-router-dom';
 import stylles from './Dialogs.module.css';
+import DialogItem from './Dialogitem/DialogItem';
+import Message from './Message/Message';
 
-function DialogItem(props) {
-    let path = '/messages/' + props.id
 
-    return (
-        <div className={stylles.dialog}>
-            <NavLink className={({ isActive }) => isActive ? stylles.active : ''
-            } to={path}>{props.name}</NavLink>
-        </div>
-    )
-}
-
-function Message(props) {
+function message(props) {
 
     return (
         <div className={stylles.message}>{props.message}</div>
