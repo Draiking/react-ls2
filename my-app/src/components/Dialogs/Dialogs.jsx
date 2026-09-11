@@ -1,6 +1,7 @@
 import stylles from './Dialogs.module.css';
 import DialogItem from './Dialogitem/DialogItem';
 import Message from './Message/Message';
+import { dialogsData, messagesData } from '../..';
 
 
 function message(props) {
@@ -12,24 +13,10 @@ function message(props) {
 
 const Dialogs = (props) => {
 
-    let dialogsData = [
-        { id: 1, name: 'Dimych' },
-        { id: 2, name: 'Sveta' },
-        { id: 3, name: 'Andrey' },
-        { id: 4, name: 'Sasha' },
-        { id: 5, name: 'Viktor' },
-    ]
-
     let dialogsElements = dialogsData
         .map(d => <DialogItem name={d.name} id={d.id} />)
 
-    let messagesData = [
-        { id: 1, message: 'hi' },
-        { id: 2, message: 'how are you' },
-        { id: 3, message: 'word' },
-        { id: 4, message: 'Yo' },
-        { id: 5, message: 'Yo' },
-    ]
+
 
     let messagesElements = messagesData
         .map(m => <Message message={m.message} />)
