@@ -2,9 +2,8 @@ import stylles from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
-
-  let postsElements = 
-  props.postsData.map(p => <Post key={p.id} message={p.message} likecount={p.likecount} />)
+  let postsElements =
+    props.postsData.map(p => <Post key={p.id} message={p.message} likecount={p.likecount} />)
 
   return <div className={stylles.postBlock}>
     <h3>My posts</h3>

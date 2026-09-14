@@ -7,7 +7,6 @@ import Profile from './components/profile/Profile';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-import Message from './components/Dialogs/Message/Message';
 
 function App(props) {
   return (
@@ -17,8 +16,15 @@ function App(props) {
         <NavBar />
         <div className='app-wrapper-content'>
           <Routes>
-            <Route index  path='/profile' element={<Profile postsData={props.appState.postsData}/>} />
-            <Route path='/messages/*' element={<Dialogs dialogsData={props.appState.dialogsData} messagesData={props.appState.messagesData} />} />
+            <Route
+              index
+              path='/profile'
+              element={<Profile postsData={props.appState.profilePage.postsData} />} />
+            <Route
+              path='/messages/*'
+              element={<Dialogs
+                dialogsData={props.appState.messagesPage.dialogsData}
+                messagesData={props.appState.messagesPage.messagesData} />} />
 
 
             <Route path='/news' element={<News />} />
