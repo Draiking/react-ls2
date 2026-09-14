@@ -1,7 +1,7 @@
 import stylles from './Dialogs.module.css';
 import DialogItem from './Dialogitem/DialogItem';
 import Message from './Message/Message';
-import { dialogsData, messagesData } from '../../Data';
+
 
 
 
@@ -13,13 +13,13 @@ function message(props) {
 
 const Dialogs = (props) => {
 
-    let dialogsElements = dialogsData
-        .map(d => <DialogItem key={d.id} name={d.name} id={d.id} />)
+    let dialogsElements = 
+        props.dialogsData.map(d => <DialogItem key={d.id} name={d.name} id={d.id} />)
 
 
 
-    let messagesElements = messagesData
-        .map(m => <Message key={m.id} message={m.message} />)
+    let messagesElements = 
+        props.messagesData.map(m => <Message key={m.id} message={m.message} />)
 
 
     return (
